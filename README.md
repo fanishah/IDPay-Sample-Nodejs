@@ -4,7 +4,7 @@
 ```sh
 npm i
 ```
-فایل config.env با باز کنید
+فایل config.env را باز کنید
 مقدار API_KEY را با کد api kay درگاه و مقدار CALLBACK را با آدرس کال بک تراکنش قرار دهید
 <br>
 مثال »
