@@ -17,7 +17,7 @@ router.post("/buy", async (req, res) => {
     let params = {
       headers: {
         "X-API-KEY": process.env.API_KEY,
-        "X-SANDBOX": 1,
+        "X-SANDBOX": 1, // پرداخت تستی
       },
       method: "post",
       url: "https://api.idpay.ir/v1.1/payment",
@@ -58,7 +58,7 @@ router.post("/callback", async (req, res) => {
       let params = {
         headers: {
           "X-API-KEY": process.env.API_KEY,
-          // "X-SANDBOX": 1, // پرداخت تستی
+          "X-SANDBOX": 1, // پرداخت تستی
         },
         method: "post",
         url: "https://api.idpay.ir/v1.1/payment/verify",
