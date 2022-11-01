@@ -102,8 +102,5 @@ router.post("/callback", async (req, res) => {
   }
 });
 
-router.get("/", (req, res) => {
-  res.render("index");
-});
 
 module.exports = router;

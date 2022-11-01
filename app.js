@@ -9,7 +9,6 @@ const app = express();
 
 // https://idpay.ir/web-service/v1.1/#d7b83cfb9c {لیست خطا ها آیدی پی}
 
-app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, ".", "public")));
 app.use(express.urlencoded({ extended: false }));
 
