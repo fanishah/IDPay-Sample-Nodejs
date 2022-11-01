@@ -101,6 +101,4 @@ router.post("/callback", async (req, res) => {
     }
   }
 });
-
-
 module.exports = router;
