@@ -1,71 +1,21 @@
 <!DOCTYPE html>
-<html lang="fa-IR" dir="rtl">
+<html lang="fa-IR" dir="auto">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./favicon.png" type="image/png" />
-    <link rel="stylesheet" href="./output.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@500&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"/>
     <title>نمونه پرداخت آیدی پی</title>
   </head>
-  <body class="bg-gray-900">
-    <div class="flex justify-center items-center h-screen">
-      <div class="bg-blue-700 p-5 space-y-5 rounded-xl">
-        <div class="">
-          <div>
-            <img class="mx-auto w-16 mb-2" src="./favicon.png" />
-          </div>
-          <p class="text-center">نمونه پرداخت آیدی پی</p>
-        </div>
-        <div>
-          <form class="space-y-2" action="/buy" method="post">
-            <div class="flex">
-              <span class="inline-flex items-center px-3 border-l-2 text-sm rounded-r-md bg-gray-700 text-gray-400 border-gray-600">
-                <svg aria-hidden="true"class="w-5 h-5 text-gray-400"fill="currentColor"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 576 512"> <path d="M64 64C28.7 64 0 92.7 0 128V384c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64H64zm64 320H64V320c35.3 0 64 28.7 64 64zM64 192V128h64c0 35.3-28.7 64-64 64zM448 384c0-35.3 28.7-64 64-64v64H448zm64-192c-35.3 0-64-28.7-64-64h64v64zM288 352c-53 0-96-43-96-96s43-96 96-96s96 43 96 96s-43 96-96 96z"/></svg>
-              </span>
-              <input type="number"name="amount"id="amount"class="rounded-none rounded-l-lg block flex-1 min-w-0 w-full text-sm p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"placeholder="مبلغ (ریال)"/>
-            </div>
-            <div class="flex">
-              <span class="inline-flex items-center pr-4 pl-3 border-l-2 text-sm rounded-r-md bg-gray-700 text-gray-400 border-gray-600">
-                <svg aria-hidden="true"class="w-4 h-4 text-gray-400"fill="currentColor"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 448 512">
-                  <path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0S96 57.3 96 128s57.3 128 128 128zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/>
-                </svg>
-              </span>
-              <input type="text"name="fullname" id="fullname"class="rounded-none rounded-l-lg block flex-1 min-w-0 w-full text-sm p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"placeholder="نام و نام خانوادگی"/>
-            </div>
-            <div class="flex">
-              <span class="inline-flex items-center px-3 border-l-2 text-sm rounded-r-md bg-gray-700 text-gray-400 border-gray-600">
-                <svg aria-hidden="true"class="w-5 h-5 text-gray-400"fill="currentColor"viewBox="0 0 20 20"xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
-                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
-                </svg>
-              </span>
-              <input type="email"name="email"id="email"class="rounded-none rounded-l-lg block flex-1 min-w-0 w-full text-sm p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"placeholder="ایمیل"/>
-            </div>
-            <div class="flex">
-              <span class="inline-flex items-center pr-4 pl-3 border-l-2 text-sm rounded-r-md bg-gray-700 text-gray-400 border-gray-600">
-                <svg aria-hidden="true"class="w-4 h-4 text-gray-400"fill="currentColor"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 384 512"> <path d="M80 0C44.7 0 16 28.7 16 64V448c0 35.3 28.7 64 64 64H304c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H80zm80 432h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H160c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>
-              </span>
-              <input type="number" name="phone" id="phone" class="rounded-none rounded-l-lg block flex-1 min-w-0 w-full text-sm p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="شماره موبایل"/>
-            </div>
-            <div class="flex justify-center">
-              <div class="mt-2">
-                <button class="bg-blue-900 rounded-md py-2 px-8" type="submit">
-                  پرداخت
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-    <div class="fixed bottom-0 flex justify-center text-gray-600 w-full py-2" dir="ltr">
-      <p class="text-center">Made with ♥ by&nbsp</p>
-      <a class="text-red-600" target="_blank" href="https://fanishah.ir/?p=idpay">fanishah</a>
-    </div>
+  <body style="background-color: rgb(55 65 81);">
+    <form action="/buy" method="post">
+      <input type="number" name="amount" id="amount"placeholder="مبلغ (ریال)"/>
+      <input type="text"name="fullname"id="fullname"placeholder="نام و نام خانوادگی"/>
+      <input type="email"name="email"id="email"placeholder="ایمیل"/>
+      <input type="number"name="phone"id="phone"placeholder="شماره موبایل"/>
+      <button type="submit">
+        پرداخت
+      </button>
+    </form>
   </body>
 </html>
