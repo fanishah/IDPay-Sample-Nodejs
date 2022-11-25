@@ -1,33 +1,28 @@
+const express = require("express");
 const randomstring = require("randomstring");
 const axios = require("axios").default;
-const express = require("express");
 
 const router = express.Router();
 
 // درخواست پست ایجاد تراکنش
-router.post("/buy", async (req, res) => {
+router.use("/buy", async (req, res) => {
   console.log(req.body);
-  const order_id = randomstring.generate({
-    length: 12,
-    charset: "numeric",
-  });
-
   try {
     // ورودی های درخواست ایجاد تراکنش
     let params = {
       headers: {
         "X-API-KEY": process.env.API_KEY,
-        "X-SANDBOX": 1, // پرداخت تستی
+        "X-SANDBOX": 1, // تراکنش آزمایشی
       },
       method: "post",
       url: "https://api.idpay.ir/v1.1/payment",
       data: {
         name: req.body.fullname,
-        order_id,
         amount: req.body.amount,
-        phone: req.body.phone,
         mail: req.body.email,
+        phone: req.body.phone,
         callback: process.env.CALLBACK,
+        order_id: randomstring.generate({ length: 8, charset: "alphanumeric" }),
       },
     };
 
@@ -41,12 +36,12 @@ router.post("/buy", async (req, res) => {
     res.redirect(requestBuy.data.link);
   } catch (err) {
     if (err) {
-      return res.status(400).send(err.response.data);
+      return res.status(400).send(err);
     }
   }
 });
 
-// درخواست پست کال بک برای تایید ترامنش
+// درخواست پست کال بک تراکنش
 router.post("/callback", async (req, res) => {
   try {
     console.log(req.body);
@@ -58,7 +53,7 @@ router.post("/callback", async (req, res) => {
       let params = {
         headers: {
           "X-API-KEY": process.env.API_KEY,
-          "X-SANDBOX": 1, // پرداخت تستی
+          "X-SANDBOX": 1, // تراکنش آزمایشی
         },
         method: "post",
         url: "https://api.idpay.ir/v1.1/payment/verify",
@@ -101,4 +96,5 @@ router.post("/callback", async (req, res) => {
     }
   }
 });
+
 module.exports = router;
